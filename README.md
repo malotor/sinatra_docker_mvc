@@ -1,4 +1,4 @@
-# Ruby Sinatra REST API
+# Ruby Sinatra MVC
 
 REST API app with
 
@@ -16,16 +16,11 @@ REST API app with
 
     docker-compose build
     docker-compose up -d
-    chmod +x run
-    sh run rake db:migrate
-    sh run env RACK_ENV=test rake db:migrate
 
 ## Run Test
+
     sh run rspec
 
+## Web Page
 
-## Curls request
-
-    curl -i -X GET -H "Content-Type: application/json"  http://localhost:8080
-    curl -i -X GET -H "Content-Type: application/json"  http://localhost:8080/articles
-    curl -i -X POST -H "Content-Type: application/json" -d'{"title":"Title1","content":"Content 1"}' http://localhost:8080/articles
+    http://localhost:8080
